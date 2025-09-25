@@ -13,13 +13,13 @@
 },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint",
-      "prettier --check"
+      "bunx eslint --fix",
+      "bunx prettier --write"
     ],
     "*.{json,yml,yaml,md}": [
-      "prettier --check"
+      "bunx prettier --write"
     ]
-  },
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
