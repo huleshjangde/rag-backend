@@ -1,1 +1,2 @@
-bunx lint-staged
+bunx eslint . --fix
+bunx prettier --write 'src/**/*.{ts,js,json,md}'
