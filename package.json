@@ -3,16 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --exec ts-node src/index.ts",
-    "build": "tsc",
-    "prepare": "husky",
-    "start": "node dist/index.js",
-    "lint": "eslint src/**/*.{ts,js}",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier --write 'src/**/*.{ts,js,json,md}'"
-  },
+ "scripts": {
+  "dev": "bun --watch src/index.ts", 
+  "build": "tsc",
+  "start": "bun run dist/index.js",
+  "lint": "bunx eslint src/**/*.{ts,js}",
+  "lint:fix": "bunx eslint . --fix",
+  "format": "bunx prettier --write 'src/**/*.{ts,js,json,md}'"
+},
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint",
